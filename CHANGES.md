@@ -15,6 +15,111 @@
 
 <!-- towncrier release notes start -->
 
+## 6.1.0a2 (2024-02-27)
+
+
+### Bug fixes:
+
+- Remove volatile cached resource viewlet content to fix context aware expressions.
+  [petschki] #3789
+- Adapt tests after plone.app.iterate permissions use rolemap.xml
+  See https://github.com/plone/plone.app.iterate/pull/120
+  [pbauer] #3907
+- Updated metadata version to 6101.
+  [maurits] #6101
+
+
+### Internal:
+
+- Fix robot test "When page is linked show warning". @wesleybl #3902
+
+## 6.1.0a1 (2024-01-26)
+
+
+### Bug fixes:
+
+- Make PloneSite have IContentish again. @Akshat2Jain @jaroel #3833
+- Fix problem when adding a Plone site with a custom INonInstallable utility without a getNonInstallableProfiles method.
+
+  Fixes: #3862. #3862
+- Update `@@test-rendering-cheatsheet` to Bootstrap 5.3 features including color mode switcher.
+  [petschki] #3870
+- Corrected the name in a button and help text to "Classic UI" when creating a Plone site. @1letter #3873
+- Correct the behavior interface for lead image in the syndication adapter.
+  [thet] #3875
+- Change adapts to @adapter decorator.
+  [thet] #3876
+- Handle catalog queries with parenthesis inside quotes
+  [erral] #3879
+- Deprecate `get_production_resource_directory` since it is not used anywhere in core.
+  [@jensens] #3887
+- Add data-bundle="diazo" back, for backward compatibility with backend.xml (Classic UI).
+  Add a data-bundle="plonecustomcss" also for @@custom.css stylesheet
+  [yurj] #3890
+
+## 6.1.0a1.dev0 (2023-10-18)
+
+
+### New features:
+
+- Remove deprecated ``plone.app.widgets``
+  [petschki] #3686
+- Add `plone-61` as zcml feature, and define `PLONE61MARKER` as True.
+  [maurits] #6100
+
+
+### Bug fixes:
+
+- Explicitly disable ``Products.CMFCore.explicitacquisition`` in Plone 6.
+  [jaroel] explicitacquisition
+- Register site syndication settings from plone.base instead of CMFPlone.
+  [maurits] #315
+- Remove the plone.app.multilingual dependency
+  [@folix-01] #3779
+- Do not use `UniqueObject` class for `PlonePortal`
+  [petschki] #3823
+- Fix deprecated imports.
+  [petschki] #3830
+- avoid searching all users after group editing, when many_users is flagged @mamico #3845
+- Updated metadata version to 6019.
+  [maurits] #6019
+- Updated metadata version to 6100.
+  [maurits] #6100
+
+
+### Internal:
+
+- cleanup: remove `mock` from test dependencies. @jairhenrique #3857
+
+
+## 6.0.7 (2023-09-21)
+
+
+### Bug fixes:
+
+- Register site syndication settings from plone.base instead of CMFPlone.
+  [maurits] #315
+
+
+## 6.0.7rc1 (2023-09-14)
+
+
+### Bug fixes:
+
+- Explicitly disable ``Products.CMFCore.explicitacquisition`` in Plone 6.
+  [jaroel] explicitacquisition
+- Update `plone.app.z3cform` dependency version and deprecate `plone.app.widgets`
+  [petschki] #3821
+- Updated metadata version to 6018.
+  [maurits] #6018
+
+
+### Tests
+
+- Fix unstable robot test scenario Reorder Folder Contents.
+  [maurits] #3811
+
+
 ## 6.0.6 (2023-06-27)
 
 
